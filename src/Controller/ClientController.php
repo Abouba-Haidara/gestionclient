@@ -10,8 +10,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ClientController extends AbstractController {
 
-    private $em;
+    /**
+     * @var ObjectManager
+     */
+    private $em ;
+    /**
+     * @var ClientRepository 
+     */
     private $repository;
+    
     public function __construct(ClientRepository $repository, EntityManagerInterface $em)
     {
         //communik avk bd pour initialiser entitymana
